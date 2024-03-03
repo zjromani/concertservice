@@ -1,28 +1,16 @@
-## Micronaut 4.3.2 Documentation
+# Concert Service
 
-- [User Guide](https://docs.micronaut.io/4.3.2/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.3.2/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.3.2/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+## How It Works
 
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-- [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
-- [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-## Feature serialization-jackson documentation
+Our service acts as a bridge between the MusicVendor API and the [Music FE](https://github.com/zjromani/music-frontend), processing requests from users interested in discovering concerts. Here's a glimpse into the magic:
 
-- [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
+1. Search for Concerts: Users can initiate searches by date, location, or through open text search, looking for their favorite concerts or exploring new ones.
+2. Fetch Concert Details: For every selected concert, we dive enrich the data, fetching detailed information to provide a full picture, including the tracks played and available recordings.
 
+## Technologies and Tools
 
-## Feature ksp documentation
-
-- [Micronaut Kotlin Symbol Processing (KSP) documentation](https://docs.micronaut.io/latest/guide/#kotlin)
-
-- [https://kotlinlang.org/docs/ksp-overview.html](https://kotlinlang.org/docs/ksp-overview.html)
-
-
-## Feature micronaut-aot documentation
-
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
-
-
+- **Kotlin:** Our choice for its concise syntax and compatibility with the JVM ecosystem.
+- **Micronaut Framework:** For building modular, easily testable, and scalable microservices.
+- **gRPC:** Facilitates internal communication with the Song Service, ensuring efficient data exchange.
+- **Docker & Kubernetes:** Ensures our service is reliably deployed and scaled within cloud environments.
+- **Terraform:** Manages our infrastructure as code, providing a stable and predictable deployment mechanism.
