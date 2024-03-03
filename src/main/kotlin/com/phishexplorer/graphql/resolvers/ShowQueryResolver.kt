@@ -1,14 +1,13 @@
-import com.coxautodev.graphql.tools.GraphQLQueryResolver
-import com.phishexplorer.models.Show
+import com.phishexplorer.musicservice.models.Show
 import org.springframework.stereotype.Component
 import java.time.LocalDate
 
 @Component
-class ShowQueryResolver : GraphQLQueryResolver {
-    fun show(id: String): Show? {
+class ShowQueryResolver {
+    fun show(id: String): Show {
         return Show(
-            id = "1",
-            date = "1995-12-14",
+            id = id,
+            date = LocalDate.of(1992, 12, 14),
             location = "Binghamton, NY",
             venue = "Broome County Arena",
             setlist = listOf(
