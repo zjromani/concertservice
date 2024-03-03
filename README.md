@@ -1,11 +1,12 @@
-# Concert Service
+# Music Service
 
 ## How It Works
 
-Our service acts as a bridge between the MusicVendor API and the [Music FE](https://github.com/zjromani/music-frontend), processing requests from users interested in discovering concerts. Here's a glimpse into the magic:
+Our service acts as a bridge between the MusicVendor API and the [Music FE](https://github.com/zjromani/music-frontend).
 
-1. Search for Concerts: Users can initiate searches by date, location, or through open text search, looking for their favorite concerts or exploring new ones.
-2. Fetch Concert Details: For every selected concert, we dive enrich the data, fetching detailed information to provide a full picture, including the tracks played and available recordings.
+- Manages all data related to music, including concerts, songs, artists, and venues. It's responsible for fetching data from external sources (MusicVendor APIs and [PhishRumors.com](http://phishrumors.com/)), storing this data, and serving it to clients.
+- Communicates with external APIs to gather music data and with the **`music-prediction`** service for predictive insights.
+- Stores relational music data as a cache
 
 ## Technologies and Tools
 

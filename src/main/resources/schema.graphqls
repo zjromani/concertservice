@@ -1,0 +1,41 @@
+type Show {
+  id: ID!
+  date: String!
+  venue: Venue!
+  artists: [Artist!]!
+  setlist: [Song!]!
+}
+
+type Song {
+  id: ID!
+  title: String!
+  artist: Artist!
+  duration: Int
+  genre: String
+}
+
+type Artist {
+  id: ID!
+  name: String!
+  biography: String
+  genre: String
+}
+
+type Venue {
+  id: ID!
+  name: String!
+  location: String!
+  capacity: Int
+}
+
+type Query {
+  show(id: ID!): Show
+  songs(title: String, artistName: String): [Song]
+  song(id: ID!): Song
+  artists(name: String, genre: String): [Artist]
+  artist(id: ID!): Artist
+  venues(name: String, location: String): [Venue]
+  venue(id: ID!): Venue
+}
+
+
